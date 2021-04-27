@@ -1,13 +1,109 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x6A4A8B1948FBAA45",
+      "device": "xc7k70tfbv676-1",
       "gen_directory": "../../../../MIPS.gen/sources_1/bd/mips",
       "name": "mips",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2020.2"
     },
-    "design_tree": {}
+    "design_tree": {
+      "registerFile_0": "",
+      "PC_0": ""
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "registerFile_0": {
+        "vlnv": "xilinx.com:module_ref:registerFile:1.0",
+        "xci_name": "mips_registerFile_0_0",
+        "xci_path": "ip\\mips_registerFile_0_0\\mips_registerFile_0_0.xci",
+        "inst_hier_path": "registerFile_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "registerFile",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "readReg1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "readReg2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "writeReg": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "dataWrite": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "dataRead1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "dataRead2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "write": {
+            "direction": "I"
+          }
+        }
+      },
+      "PC_0": {
+        "vlnv": "xilinx.com:module_ref:PC:1.0",
+        "xci_name": "mips_PC_0_0",
+        "xci_path": "ip\\mips_PC_0_0\\mips_PC_0_0.xci",
+        "inst_hier_path": "PC_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "addin": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "addout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_1": {
+        "ports": [
+          "clk",
+          "registerFile_0/clk"
+        ]
+      }
+    }
   }
 }
